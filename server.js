@@ -1,11 +1,10 @@
+const express = require('express')
 let app = require('express')();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
 let connections = [];
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-});
+app.use(express.static('.'));
 
 
 http.listen(3000, () => {
