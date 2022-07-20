@@ -42,8 +42,8 @@
                         <small v-if="typing" class="text-white">{{typing}} is typing</small>
                         <li class="list-group-item" v-for="message in messages">
                             <span :class="{'float-left':message.type === 1}">
+                                <small>{{message.user}}:</small>
                                 {{message.message}}
-                                <small>:{{message.user}}</small>
                             </span>
                         </li>
                     </ul>
